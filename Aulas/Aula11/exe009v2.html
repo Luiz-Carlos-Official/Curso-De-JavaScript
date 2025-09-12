@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual pais Você é?</title>
+</head>
+<body>
+    <h1>Qual sua Nacionalidade?</h1>
+    De qual pais você é <input type="text" name="pais" id="pais">
+    <input type="button" value="descubra" onclick="nascionalidade()">
+    <div id="naci">
+
+    </div>
+    
+    <script>
+        function nascionalidade() {
+            var p = window.document.getElementById('pais').value.trim();
+            var naci = window.document.getElementById('naci')
+
+            naci.innerHTML = `Você é do pais ${p}`
+
+            if(p == 'Brasil') {
+                naci.innerHTML = `Você é brasileiro!`
+            }
+
+            else {
+                naci.innerHTML = `Você é estrangeiro!`
+            }
+        }
+    </script>
+</body>
+</html>
